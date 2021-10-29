@@ -2,31 +2,31 @@
 [debug] IncrementalCompile.incrementalCompile
 [debug] previous = Stamps for: 3 products, 1 sources, 1 libraries
 [debug] current source = Set(${BASE}/src/main/scala/main.scala)
-[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/main.scala), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(${BASE}/target/scala-2.13/classes/main$.class, ${BASE}/target/scala-2.13/classes/main$delayedInit$body.class, ${BASE}/target/scala-2.13/classes/main.class),Set(),API Changes: Set())
 [debug] 
 [debug] Initial source changes:
 [debug] 	removed: Set()
 [debug] 	added: Set()
-[debug] 	modified: Set(${BASE}/src/main/scala/main.scala)
-[debug] Invalidated products: Set()
+[debug] 	modified: Set()
+[debug] Invalidated products: Set(${BASE}/target/scala-2.13/classes/main$.class, ${BASE}/target/scala-2.13/classes/main$delayedInit$body.class, ${BASE}/target/scala-2.13/classes/main.class)
 [debug] External API changes: API Changes: Set()
 [debug] Modified binary dependencies: Set()
-[debug] Initial directly invalidated classes: Set(main)
+[debug] Initial directly invalidated classes: Set()
 [debug] Sources indirectly invalidated by:
-[debug] 	product: Set()
+[debug] 	product: Set(${BASE}/src/main/scala/main.scala)
 [debug] 	binary dep: Set()
 [debug] 	external source: Set()
 [debug] all 1 sources are invalidated
-[debug] Initial set of included nodes: main
+[debug] Initial set of included nodes: 
 [debug] Recompiling all sources: number of invalidated sources > 50.0% of all sources
 [debug] compilation cycle 1
 [info] compiling 1 Scala source to C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes ...
 [debug] Getting org.scala-sbt:compiler-bridge_2.13:1.5.7:compile for Scala 2.13.6
-[debug] [zinc] Running cached compiler 141afca3 for Scala compiler version 2.13.6
+[debug] [zinc] Running cached compiler 670a229e for Scala compiler version 2.13.6
 [debug] [zinc] The Scala compiler is invoked with:
 [debug] 	-bootclasspath
 [debug] 	C:\Users\nostr\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar
 [debug] 	-classpath
 [debug] 	C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes
-[debug] Scala compilation took 0.5342127 s
+[debug] Scala compilation took 0.3889324 s
 [info] done compiling
