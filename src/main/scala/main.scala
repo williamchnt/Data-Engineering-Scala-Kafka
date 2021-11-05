@@ -9,4 +9,6 @@ object main extends App {
   print("Query or Reports (Q or R): ")
   val option = readLine()
   val="je refais une test"
+  val= "we"
+  val= "we"
 }
