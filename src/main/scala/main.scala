@@ -8,5 +8,5 @@ object main extends App {
   print(airports.take(1).next())
   print("Query or Reports (Q or R): ")
   val option = readLine()
-  val = "bonjour"
+  val="je refais une test"
 }
