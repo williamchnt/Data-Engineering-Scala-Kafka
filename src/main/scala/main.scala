@@ -19,6 +19,8 @@ object main extends App {
    }
 
   val airports = API.convertFileToAirports("resources/airports.csv")
+  val countries = API.convertFileToCountries("resources/countries.csv")
+  val runways = API.convertFileToRunways("resources/runways.csv")
 
   def Reports() =  {
     println("Reports")
