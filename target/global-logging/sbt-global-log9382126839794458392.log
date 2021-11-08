@@ -1,0 +1,8 @@
+[debug] > Exec(erun, None, None)
+[error] Not a valid command: erun
+[error] Not a valid project ID: erun
+[error] Expected ':'
+[error] Not a valid key: erun (similar: run, runner, runMain)
+[error] erun
+[error]     ^
+[debug] > Exec(idea-shell, None, None)

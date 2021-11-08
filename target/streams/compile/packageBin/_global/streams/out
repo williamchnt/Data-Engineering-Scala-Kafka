@@ -1,1 +1,13 @@
-[debug] Jar uptodate: C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\scala_2.13-0.1.jar
+[debug] Packaging C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\scala_2.13-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	main$.class
+[debug] 	  C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes\main$.class
+[debug] 	main$delayedInit$body.class
+[debug] 	  C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes\main$delayedInit$body.class
+[debug] 	main.class
+[debug] 	  C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes\main.class
+[debug] 	model$.class
+[debug] 	  C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes\model$.class
+[debug] 	model.class
+[debug] 	  C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes\model.class
+[debug] Done packaging.

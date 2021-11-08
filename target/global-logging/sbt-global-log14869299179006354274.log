@@ -1,0 +1,10 @@
+[debug] > Exec(T, None, None)
+[error] Not a valid command: T
+[error] Expected 'ThisBuild'
+[error] Not a valid project ID: T
+[error] Expected ':'
+[error] Expected '/'
+[error] Not a valid key: T
+[error] T
+[error]  ^
+[debug] > Exec(idea-shell, None, None)
