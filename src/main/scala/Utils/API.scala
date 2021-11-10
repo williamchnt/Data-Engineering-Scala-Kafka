@@ -3,6 +3,7 @@ import Class.Airport
 import Class.Runway
 import Class.Country
 
+import scala.annotation.tailrec
 import scala.collection.immutable.ListMap
 
 object API {
@@ -53,6 +54,7 @@ object API {
 
 
   private def createMapOfNumberAirports(airports : List[Airport]): Map[String, Int] = {
+    @tailrec
     def aux(airports : List[Airport], acc: Map[String, Int] ): Map[String, Int] = airports match {
       case Nil => acc
       case x :: xs =>
@@ -62,7 +64,7 @@ object API {
           val acc2 = acc.-(key)
           aux( xs, acc2 + (key -> (nb+1)) )
         }else{
-          aux( xs, acc + (key -> (1)) )
+          aux( xs, acc + (key -> 1) )
         }
     }
 
@@ -72,16 +74,17 @@ object API {
 
 
   def getTypeOfRunwaysPerCountry(airports : List[Airport], runways: List[Runway]): Map[ String,Set[String] ] = {
+    @tailrec
     def aux(airports : List[Airport], runways: List[Runway], acc: Map[ String,Set[String] ] ): Map[ String,Set[String] ] = runways match {
       case Nil => acc
-      case x :: xs => {
+      case x :: xs =>
         x.surface match{
           case None => aux(airports, xs, acc)
-          case Some(_) => {
+          case Some(_) =>
             val airportOfRunway = airports.find(a => a.ident.equals(x.airportIdent))
             airportOfRunway match {
               case None => aux(airports, xs, acc)
-              case Some(value) => {
+              case Some(value) =>
                 val key = value.isoCountry.get
                 if (acc.contains(key)) {
                   val setOfCountry = acc(key)
@@ -90,11 +93,8 @@ object API {
                 } else {
                   aux(airports, xs, acc + (key -> (Set() + x.surface.get )))
                 }
-              }
             }
-          }
         }
-      }
     }
 
 
@@ -102,29 +102,28 @@ object API {
   }
 
   def getTenMostCommonRunwaysLatitude(runways: List[Runway]): Set[String] = {
+    @tailrec
     def aux(runways: List[Runway], acc: Map[String, Int]) : Map[String,Int] = runways match {
       case Nil => acc
       case x :: xs =>
         val key = x.leIdent
         key match {
           case None => aux(xs, acc)
-          case Some(keyValue) =>{
+          case Some(keyValue) =>
             if(acc.contains(keyValue)){
               val nb = acc(keyValue)
               val acc2 = acc.-(keyValue)
               aux(xs, acc2 + (keyValue -> (nb+1)) )
             }else{
-              aux( xs, acc + (keyValue -> (1)) )
+              aux( xs, acc + (keyValue -> 1) )
             }
-          }
         }
     }
 
 
     val frequencyMap = aux(runways, Map[String,Int]())
-    ListMap(frequencyMap.toSeq.sortWith(_._2 > _._2):_*)
-      .take(10)
-      .map(x =>  x._1)
+    ListMap(frequencyMap.toSeq.sortWith(_._2 > _._2): _*)
+      .take(10).keys
       .toSet
   }
 
@@ -132,13 +131,9 @@ object API {
     scala.io.Source.fromFile(file, "utf-8").getLines().drop(1) map( l => Runway(l))
   }
 
-  /**
-   * create a hmap with the name of airport in key and the List of runways in value
-   * @param airports : list of (ident, name)
-   * @param runways
-   * @return
-   */
+
   def getRunwaysInAirportList(airports: List[ (Option[String],Option[String])], runways: List[Runway]): Map[Option[String], List[String]] = {
+    @tailrec
     def aux(airports: List[ (Option[String],Option[String]) ], runways: List[Runway], acc: Map[Option[String], List[String]] ): Map[Option[String], List[String]] = airports match{
       case Nil => acc
       case ( ident, name ) :: xs =>
@@ -152,5 +147,22 @@ object API {
       case None => false
       case Some(value) => value.equals(airportIdent.get)
     }).map(r => "id = " + r.id.get)
+  }
+
+  //todo transform the Map into a QueryResponse
+
+  def queryCode(countryCode : String, airports: List[Airport], runways: List[Runway]) : Map[Option[String], List[String]] = {
+    val airportsInCountry =  API.getAirportsInCountry(countryCode, airports)
+    //println("airports : " +airportsInCountry)
+    API.getRunwaysInAirportList( airportsInCountry.map(a => (a.ident, a.name) ), runways)
+  }
+
+
+  def queryName(countryName : String, countries: List[Country], airports: List[Airport], runways: List[Runway]) : Map[Option[String], List[String]] = {
+    val code = API.getCodeFromName(countryName, countries)
+    code match {
+      case None => Map[Option[String], List[String]]()
+      case Some(codeValue) => queryCode(codeValue, airports, runways)
+    }
   }
 }
