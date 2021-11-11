@@ -360,21 +360,21 @@ class API extends org.scalatest.FunSuite{
 
   test("testMyToBoolean") {
     val s = "1"
-    assert(Utils.myToBoolean(s).equals(Some(true)))
+    assert(Utils.myToBoolean(s).contains(true))
   }
 
   test("testMyToString") {
     val s = "hello"
-    assert(utils.myToString(s).equals(Some("hello")))
+    assert(Utils.myToString(s).contains("hello"))
   }
 
   test("testMyToFloat") {
     val s = "1.0"
-    assert(utils.myToFloat(s).equals(Some(1.0)))
+    assert(Utils.myToFloat(s).contains(1.0))
   }
 
   test("testMyToInt") {
     val s = "711"
-    assert(utils.myToInt(s).equals(Some(711)))
+    assert(Utils.myToInt(s).contains(711))
   }
 }

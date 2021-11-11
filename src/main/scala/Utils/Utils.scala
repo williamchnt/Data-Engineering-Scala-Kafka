@@ -1,6 +1,6 @@
 package Utils
 
-class Utils {
+object Utils {
 
   def myToInt(s: String): Option[Int] = {
     if (s.isBlank){
