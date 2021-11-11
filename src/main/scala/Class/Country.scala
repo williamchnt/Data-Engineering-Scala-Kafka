@@ -12,14 +12,13 @@ case class Country(id : Option[Int],
 object Country{
   def apply(line : String): Country = {
     val data = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1)
-    val utils = new Utils
     new Country(
-      utils.myToInt(data(0)),
-      utils.myToString(data(1)),
-      utils.myToString(data(2)),
-      utils.myToString(data(3)),
-      utils.myToString(data(4)),
-      utils.myToString(data(5))
+      Utils.myToInt(data(0)),
+      Utils.myToString(data(1)),
+      Utils.myToString(data(2)),
+      Utils.myToString(data(3)),
+      Utils.myToString(data(4)),
+      Utils.myToString(data(5))
     )
   }
 }

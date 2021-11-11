@@ -26,10 +26,6 @@ object Utils {
     }
   }
 
-  //todo voir si au lieu de faire une option on ne
-  // retournerait pas un false au lieu d'un None
-  // donc pas d'Option
-
   def myToBoolean(s: String): Option[Boolean] = {
     if (s.isBlank){
       None

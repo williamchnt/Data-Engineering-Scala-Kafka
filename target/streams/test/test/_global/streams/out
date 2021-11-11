@@ -1,0 +1,40 @@
+[debug] Running TaskDef(API, org.scalatest.tools.Framework$$anon$1@5a635aff, false, [SuiteSelector])
+[debug] Running TaskDef(Class, org.scalatest.tools.Framework$$anon$1@5a635aff, false, [SuiteSelector])
+[info] Class:
+[info] - testAirport
+[info] - testCounty
+[info] - testRunway
+[info] API:
+[info] - testGetAirportsInCountry
+[info] - testConvertFileToAirports *** FAILED ***
+[info]   java.io.FileNotFoundException: src\test\data\testAirport.csv (Le fichier spécifié est introuvable)
+[info]   at java.base/java.io.FileInputStream.open0(Native Method)
+[info]   at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+[info]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+[info]   at scala.io.Source$.fromFile(Source.scala:94)
+[info]   at scala.io.Source$.fromFile(Source.scala:79)
+[info]   at scala.io.Source$.fromFile(Source.scala:57)
+[info]   at scala.io.Source$.fromFile(Source.scala:63)
+[info]   at Utils.API$.convertFileToAirports(API.scala:11)
+[info]   at API.$anonfun$new$2(API.scala:82)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   ...
+[info] - testGetCodeFromName
+[info] - testConvertFileToCountries
+[info] - testIsStringCountryCode
+[info] - testQueryName
+[info] - testQueryCode
+[info] - testMyToBoolean
+[info] - testMyToString
+[info] - testMyToFloat
+[info] - testMyToInt
+[info] Run completed in 443 milliseconds.
+[info] Total number of tests run: 14
+[info] Suites: completed 2, aborted 0
+[info] Tests: succeeded 13, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[debug] Passed tests:
+[debug] 	Class
+[error] Failed tests:
+[error] 	API
+[error] (Test / test) sbt.TestsFailedException: Tests unsuccessful

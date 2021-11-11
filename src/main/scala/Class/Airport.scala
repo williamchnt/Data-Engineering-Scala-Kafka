@@ -25,27 +25,26 @@ case class Airport(id: Option[Int],
 object Airport{
   def apply(line : String): Airport = {
     val data = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1)
-    val utils = new Utils
     //println("\t\tla name data : " + data(4))
     new Airport(
-      utils.myToInt(data(0)),
-      utils.myToString(data(1)),
-      utils.myToString(data(2)),
-      utils.myToString(data(3)),
-      utils.myToFloat(data(4)),
-      utils.myToFloat(data(5)),
-      utils.myToInt(data(6)),
-      utils.myToString(data(7)),
-      utils.myToString(data(8)),
-      utils.myToString(data(9)),
-      utils.myToString(data(10)),
-      utils.myToString(data(11)),
-      utils.myToString(data(12)),
-      utils.myToString(data(13)),
-      utils.myToString(data(14)),
-      utils.myToString(data(15)),
-      utils.myToString(data(16)),
-      utils.myToString(data(17)),
+      Utils.myToInt(data(0)),
+      Utils.myToString(data(1)),
+      Utils.myToString(data(2)),
+      Utils.myToString(data(3)),
+      Utils.myToFloat(data(4)),
+      Utils.myToFloat(data(5)),
+      Utils.myToInt(data(6)),
+      Utils.myToString(data(7)),
+      Utils.myToString(data(8)),
+      Utils.myToString(data(9)),
+      Utils.myToString(data(10)),
+      Utils.myToString(data(11)),
+      Utils.myToString(data(12)),
+      Utils.myToString(data(13)),
+      Utils.myToString(data(14)),
+      Utils.myToString(data(15)),
+      Utils.myToString(data(16)),
+      Utils.myToString(data(17)),
     )
   }
 }

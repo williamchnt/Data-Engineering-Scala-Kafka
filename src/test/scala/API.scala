@@ -78,7 +78,7 @@ class API extends org.scalatest.FunSuite{
   }
 
   test("testConvertFileToAirports") {
-    val file = "src/test/ressource/testAirport.csv"
+    val file = "src/test/data/testAirport.csv"
     val actual = API.convertFileToAirports(file).next()
     assert( actual.id.get == 6523 )
     assert( actual.ident.get.equals("\"00A\""))
@@ -135,7 +135,7 @@ class API extends org.scalatest.FunSuite{
 
 
   test("testConvertFileToCountries") {
-    val file = "src/test/ressource/testContries.csv"
+    val file = "src/test/data/testCountries.csv"
     val actual = API.convertFileToCountries(file).next()
     assert( actual.id.get == 302672 )
     assert( actual.code.get.equals("\"AD\""))

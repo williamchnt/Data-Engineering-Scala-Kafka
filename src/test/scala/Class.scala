@@ -22,11 +22,11 @@ class Class extends org.scalatest.FunSuite{
     assert(airport.municipality.get.equals("\"Bensalem\""))
     assert(airport.scheduled_service.get.equals("\"no\""))
     assert(airport.gpsCode.get.equals("\"00A\""))
-    assert(airport.iataCode.equals(None))
+    assert(airport.iataCode.isEmpty)
     assert(airport.localCode.get.equals("\"00A\""))
-    assert(airport.homeLink.equals(None))
-    assert(airport.wikipediaLink.equals(None))
-    assert(airport.keywords.equals(None))
+    assert(airport.homeLink.isEmpty)
+    assert(airport.wikipediaLink.isEmpty)
+    assert(airport.keywords.isEmpty)
   }
 
   test("testCounty") {
@@ -40,7 +40,7 @@ class Class extends org.scalatest.FunSuite{
     assert(country.name.get.equals("\"Andorra\""))
     assert(country.continent.get.equals("\"EU\""))
     assert(country.wikipediaLink.get.equals("\"http://en.wikipedia.org/wiki/Andorra\""))
-    assert(country.keywords.equals(None))
+    assert(country.keywords.isEmpty)
 
   }
 
@@ -56,20 +56,20 @@ class Class extends org.scalatest.FunSuite{
     assert(runway.lengthFt.get.equals("80"))
     assert(runway.widthFt.get == 80)
     assert(runway.surface.get.equals("\"ASPH-G\""))
-    assert(runway.lighted.get == true)
-    assert(runway.closed.get == false)
+    assert(runway.lighted.get)
+    assert(!runway.closed.get)
     assert(runway.leIdent.get.equals("\"H1\""))
-    assert(runway.leLatitudeDeg.equals(None))
-    assert(runway.leLongitudeDeg.equals(None))
-    assert(runway.leElevationFt.equals(None))
-    assert(runway.leHeadingDegT.equals(None))
-    assert(runway.leDisplacedThresholdFt.equals(None))
-    assert(runway.heIdent.equals(None))
-    assert(runway.heLatitudeDeg.equals(None))
-    assert(runway.heLongitudeDeg.equals(None))
-    assert(runway.heElevationFt.equals(None))
-    assert(runway.heHeadingDegT.equals(None))
-    assert(runway.heDisplacedThresholdFt.equals(None))
+    assert(runway.leLatitudeDeg.isEmpty)
+    assert(runway.leLongitudeDeg.isEmpty)
+    assert(runway.leElevationFt.isEmpty)
+    assert(runway.leHeadingDegT.isEmpty)
+    assert(runway.leDisplacedThresholdFt.isEmpty)
+    assert(runway.heIdent.isEmpty)
+    assert(runway.heLatitudeDeg.isEmpty)
+    assert(runway.heLongitudeDeg.isEmpty)
+    assert(runway.heElevationFt.isEmpty)
+    assert(runway.heHeadingDegT.isEmpty)
+    assert(runway.heDisplacedThresholdFt.isEmpty)
 
   }
 }

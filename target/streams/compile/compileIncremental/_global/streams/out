@@ -1,47 +1,6 @@
 [debug] [zinc] IncrementalCompile -----------
 [debug] IncrementalCompile.incrementalCompile
-[debug] previous = Stamps for: 12 products, 6 sources, 1 libraries
+[debug] previous = Stamps for: 13 products, 6 sources, 1 libraries
 [debug] current source = Set(${BASE}/src/main/scala/main.scala, ${BASE}/src/main/scala/Class/Runway.scala, ${BASE}/src/main/scala/Class/Airport.scala, ${BASE}/src/main/scala/Utils/API.scala, ${BASE}/src/main/scala/Utils/Utils.scala, ${BASE}/src/main/scala/Class/Country.scala)
-[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/main.scala), unmodified = ...),Set(${BASE}/target/scala-2.13/classes/main$.class),Set(),API Changes: Set())
-[debug] 
-[debug] Initial source changes:
-[debug] 	removed: Set()
-[debug] 	added: Set()
-[debug] 	modified: Set(${BASE}/src/main/scala/main.scala)
-[debug] Invalidated products: Set(${BASE}/target/scala-2.13/classes/main$.class)
-[debug] External API changes: API Changes: Set()
-[debug] Modified binary dependencies: Set()
-[debug] Initial directly invalidated classes: Set(main)
-[debug] Sources indirectly invalidated by:
-[debug] 	product: Set(${BASE}/src/main/scala/main.scala)
-[debug] 	binary dep: Set()
-[debug] 	external source: Set()
-[debug] All initially invalidated classes: Set(main)
-[debug] All initially invalidated sources:Set(${BASE}/src/main/scala/main.scala)
-[debug] Initial set of included nodes: main
-[debug] compilation cycle 1
-[info] compiling 1 Scala source to C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes ...
-[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.5.7:compile for Scala 2.13.6
-[debug] [zinc] Running cached compiler 3a23e272 for Scala compiler version 2.13.6
-[debug] [zinc] The Scala compiler is invoked with:
-[debug] 	-bootclasspath
-[debug] 	C:\Users\nostr\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar
-[debug] 	-classpath
-[debug] 	C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes
-[debug] Invalidating (transitively) by inheritance from main...
-[debug] Initial set of included nodes: main
-[debug] Invalidated by transitive inheritance dependency: Set(main)
-[debug] Change NamesChange(main,ModifiedNames(changes = UsedName(finalize,[Default]))) invalidates 1 classes due to The main has the following regular definitions changed:
-[debug] 	UsedName(finalize,[Default]).
-[debug]   > by transitive inheritance: Set(main)
-[debug]   > 
-[debug]   > 
-[debug]         
-[debug] New invalidations:
-[debug] Initial set of included nodes: 
-[debug] Previously invalidated, but (transitively) depend on new invalidations:
-[debug] Final step, transitive dependencies:
-[debug] 	Set()
-[debug] No classes were invalidated.
-[debug] Scala compilation took 5.1553939 s
-[info] done compiling
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] No changes
