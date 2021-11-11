@@ -1,0 +1,17 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\nostr\OneDrive\Documents\Efrei\M1\scala\projet\target\scala-2.13\classes ...
+[warn] 1 deprecation (since 2.13.0); re-run with -deprecation for details
+[warn] one warning found
+[info] done compiling
+[error] Nonzero exit code: 1
+[error] (Compile / run) Nonzero exit code: 1
+[error] Total time: 4 s, completed 11 nov. 2021, 19:28:09
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)

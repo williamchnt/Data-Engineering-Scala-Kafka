@@ -153,7 +153,6 @@ object API {
 
   def queryCode(countryCode : String, airports: List[Airport], runways: List[Runway]) : Map[Option[String], List[String]] = {
     val airportsInCountry =  API.getAirportsInCountry(countryCode, airports)
-    //println("airports : " +airportsInCountry)
     API.getRunwaysInAirportList( airportsInCountry.map(a => (a.ident, a.name) ), runways)
   }
 
